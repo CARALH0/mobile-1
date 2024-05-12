@@ -73,3 +73,38 @@ O arquivo "app.routes.js" que você forneceu parece ser um componente de navega�
    - Exporta o componente `AppRoutes` para que ele possa ser importado e utilizado em outros lugares do aplicativo.
 
 Em resumo, esse arquivo cria uma estrutura de navegação para um aplicativo móvel utilizando o React Navigation, com uma barra de navegação inferior contendo três abas: "Home", "Search" e "Profile". Cada aba corresponde a uma tela do aplicativo, definida por componentes individuais.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Auth.routes.js**
+
+O arquivo "auth.routes.js" que você forneceu parece ser um componente de navegação para as rotas relacionadas à autenticação em um aplicativo móvel desenvolvido com React Native e o pacote de navegação React Navigation. Vou explicar cada parte do código:
+
+1. **Importações**:
+   ```javascript
+   import React from 'react';
+   import { createStackNavigator } from '@react-navigation/stack';
+   import Login from '../pages/Login';
+   ```
+   - Aqui, são importados o React, a função `createStackNavigator` do React Navigation e o componente `Login` da página de login do aplicativo.
+
+2. **Componente de Navegação em Pilha**:
+   ```javascript
+   const Stack = createStackNavigator();
+   
+   function AuthRoutes() {
+     return (
+       <Stack.Navigator>
+            <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+       </Stack.Navigator>
+     );
+   }
+   ```
+   - É definido um componente de navegação em pilha (`Stack.Navigator`) que contém apenas uma tela (`Stack.Screen`) para o login. A propriedade `headerShown` é configurada como `false` para ocultar o cabeçalho de navegação.
+
+3. **Exportação do Componente**:
+   ```javascript
+   export default AuthRoutes;
+   ```
+   - Exporta o componente `AuthRoutes` para que ele possa ser importado e utilizado em outros lugares do aplicativo.
+
+Em resumo, esse arquivo cria uma estrutura de navegação simples para a tela de login em um aplicativo móvel utilizando o React Navigation. A tela de login é a única rota disponível e é renderizada dentro de uma navegação em pilha, sem um cabeçalho de navegação visível.
+
