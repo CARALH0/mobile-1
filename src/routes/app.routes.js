@@ -18,9 +18,26 @@ const Stack = createStackNavigator();
 function StackScreen(){
   return(
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
-      <Stack.Screen name="NewPost" component={NewPost} />
-      <Stack.Screen name="PostUser" component={PostUser}/>
+      <Stack.Screen name="Home" 
+      component={Home} 
+      options={{ headerShown: false }} 
+      />
+
+      <Stack.Screen 
+      name="NewPost" 
+      component={NewPost} 
+      options={{
+        headerTintColor: '#FFF',
+        headerStyle: {
+          backgroundColor: '#36393F'
+        }
+      }}
+      />
+
+      <Stack.Screen 
+      name="PostUser" 
+      component={PostUser}
+      />
     </Stack.Navigator>
   );
 }
@@ -71,6 +88,17 @@ function AppRoutes() {
             return <Feather name="user" color={color} size={size} />
           }
         }}
+        />
+        
+        <Stack.Screen 
+        name='NewPost' 
+        component={NewPost} 
+        options={{
+          tabBarIcon: ({ color, size }) => {
+            return <Feather name="plus" color={color} size={size} />
+          }
+        }}
+        
         />
 
       </Tab.Navigator>
