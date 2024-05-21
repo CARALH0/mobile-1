@@ -18,9 +18,9 @@ margin-bottom: 5px;
 `;
 
 export const Avatar = styled.Image`
-width: 40px;
-height: 40px;
-border-radius: 20px;
+width: 60px;
+height: 60px;
+border-radius: 30px;
 margin-right: 6px;
 `;
 
@@ -28,6 +28,7 @@ export const Name = styled.Text`
 color: #353840;
 font-size: 20px;
 font-weight: bold;
+paddingHorizontal: 10px;
 `;
 
 export const ContentView = styled.View``;

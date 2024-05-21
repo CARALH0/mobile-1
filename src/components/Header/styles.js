@@ -6,8 +6,8 @@ justify-content: center;
 align-items: center;
 background-color: #353840;
 border-bottom-color: #c7c7c7;
-border-bottom-width: 1px;
-padding-top: 15px;
+border-bottom-width: 10px;
+padding-top: 1px;
 `;
 
 export const Title = styled.Text`
